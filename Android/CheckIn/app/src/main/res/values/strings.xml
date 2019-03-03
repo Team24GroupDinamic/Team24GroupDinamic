@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Check-In App</string>
+    <string name="title_registration">Registration</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_history">History</string>
+
+    <string name="enter_pnr">Enter your PNR…</string>
+    <string name="register">Register</string>
+    <string name="choose_airline">Airline</string>
+    <string name="enter_surname">Enter surname…</string>
+    <string name="submit">Submit</string>
+    <string name="intro_1_text">Register on flight by one click using Check-In App</string>
+    <string name="intro_3_text">Please enter your surname. It\'s single time procedure but if you will want you can change surname\'s field at any moment.</string>
+    <string name="enter_correct_curname">Please, enter correct surname</string>
+    <string name="enter_correct_number">Please, enter correct PNR</string>
+    <string name="surname">Surname</string>
+    <string name="profile_n_settings">Profile and settings</string>
+    <string name="registration">Registration</string>
+</resources>

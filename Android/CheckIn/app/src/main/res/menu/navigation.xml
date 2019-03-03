@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_register"
+        android:icon="@mipmap/ic_register"
+        android:title="@string/title_registration"/>
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@mipmap/ic_profile"
+        android:title="@string/title_profile"/>
+
+    <item
+        android:id="@+id/navigation_register_history"
+        android:icon="@mipmap/ic_reg_history"
+        android:title="@string/title_history"/>
+
+</menu>

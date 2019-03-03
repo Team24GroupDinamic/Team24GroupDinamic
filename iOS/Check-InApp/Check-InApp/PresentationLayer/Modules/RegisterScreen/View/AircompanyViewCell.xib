@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AircompanyViewCell" customModule="CheckInApp" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="7Ey-Bj-6Ns"/>
+                <outlet property="logoImageView" destination="eVf-4J-836" id="T7t-Zo-e8a"/>
+                <outlet property="nameLabel" destination="F4b-Dh-Qrb" id="Hly-iZ-29j"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eVf-4J-836">
+                    <rect key="frame" x="0.0" y="0.0" width="166.5" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="eVf-4J-836" secondAttribute="height" multiplier="5:3" id="ePr-ih-veb"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4b-Dh-Qrb">
+                    <rect key="frame" x="171.5" y="5" width="198.5" height="90"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="eVf-4J-836" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HTc-L1-joR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="F4b-Dh-Qrb" secondAttribute="bottom" constant="5" id="NM2-W7-2WZ"/>
+                <constraint firstItem="eVf-4J-836" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XUh-sQ-udL"/>
+                <constraint firstItem="F4b-Dh-Qrb" firstAttribute="leading" secondItem="eVf-4J-836" secondAttribute="trailing" constant="5" id="f0p-Jh-taz"/>
+                <constraint firstItem="F4b-Dh-Qrb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="fsP-16-Jts"/>
+                <constraint firstAttribute="bottom" secondItem="eVf-4J-836" secondAttribute="bottom" id="gqR-wt-8b4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="F4b-Dh-Qrb" secondAttribute="trailing" constant="5" id="suU-89-TxY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-175" y="95"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NameDataEditView" customModule="CheckInApp" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="aaA-0X-y0T"/>
+                <outlet property="dateLabel" destination="l0C-4k-wGl" id="qjm-CQ-zzt"/>
+                <outlet property="datePicker" destination="nxf-rj-Jkd" id="B62-Oj-WW3"/>
+                <outlet property="leftButton" destination="gAM-ED-jub" id="Kc2-0g-Upk"/>
+                <outlet property="nameLabel" destination="hGw-Wg-sc7" id="erK-nU-aiT"/>
+                <outlet property="nameTextField" destination="EkC-64-Djr" id="xMz-sK-Ft9"/>
+                <outlet property="rightButton" destination="35D-pY-0rs" id="4tX-TJ-MQ1"/>
+                <outlet property="scrollView" destination="vhw-9q-7V4" id="c1P-WD-ysl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="vhw-9q-7V4">
+                    <rect key="frame" x="19" y="50" width="337.5" height="567"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="sb6-OU-FzY">
+                            <rect key="frame" x="0.0" y="0.0" width="337.5" height="52"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGw-Wg-sc7">
+                                    <rect key="frame" x="0.0" y="0.0" width="337.5" height="21.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EkC-64-Djr">
+                                    <rect key="frame" x="0.0" y="26" width="337.5" height="0.0"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0C-4k-wGl">
+                                    <rect key="frame" x="0.0" y="30.5" width="337.5" height="21.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="nxf-rj-Jkd">
+                                    <rect key="frame" x="0.0" y="52" width="337.5" height="0.0"/>
+                                    <date key="date" timeIntervalSinceReferenceDate="568559582.22805905">
+                                        <!--2019-01-07 13:13:02 +0000-->
+                                    </date>
+                                    <locale key="locale" localeIdentifier="ru"/>
+                                </datePicker>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="nxf-rj-Jkd" firstAttribute="width" secondItem="sb6-OU-FzY" secondAttribute="width" id="KmT-DX-yVt"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="sb6-OU-FzY" firstAttribute="top" secondItem="vhw-9q-7V4" secondAttribute="top" id="1XU-vA-dtt"/>
+                        <constraint firstAttribute="trailing" secondItem="sb6-OU-FzY" secondAttribute="trailing" id="3DJ-m5-DuY"/>
+                        <constraint firstItem="sb6-OU-FzY" firstAttribute="leading" secondItem="vhw-9q-7V4" secondAttribute="leading" id="XNK-3y-WAB"/>
+                        <constraint firstItem="sb6-OU-FzY" firstAttribute="width" secondItem="vhw-9q-7V4" secondAttribute="width" id="p4s-Kp-Bhi"/>
+                        <constraint firstAttribute="bottom" secondItem="sb6-OU-FzY" secondAttribute="bottom" id="zbo-fe-brq"/>
+                    </constraints>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAM-ED-jub" customClass="EditFlowButton" customModule="CheckInApp" customModuleProvider="target">
+                    <rect key="frame" x="15" y="577" width="75" height="75"/>
+                    <color key="backgroundColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="gAM-ED-jub" secondAttribute="height" multiplier="1:1" id="nCC-u0-rCo"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="753" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35D-pY-0rs" customClass="EditFlowButton" customModule="CheckInApp" customModuleProvider="target">
+                    <rect key="frame" x="285" y="577" width="75" height="75"/>
+                    <color key="backgroundColor" red="0.0" green="0.86274509799999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="35D-pY-0rs" secondAttribute="height" multiplier="1:1" id="GEq-6f-XXu"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="gAM-ED-jub" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.2" id="ArE-UK-cBl"/>
+                <constraint firstItem="vhw-9q-7V4" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.9" id="I4G-GL-ZPF"/>
+                <constraint firstItem="vhw-9q-7V4" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="JYS-bh-qRx"/>
+                <constraint firstItem="gAM-ED-jub" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="S5y-xM-ozd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="35D-pY-0rs" secondAttribute="bottom" constant="15" id="bbL-Ea-aRf"/>
+                <constraint firstItem="vhw-9q-7V4" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.85" id="cg2-PY-UHs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="35D-pY-0rs" secondAttribute="trailing" constant="15" id="cpK-FL-WjO"/>
+                <constraint firstItem="vhw-9q-7V4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dEA-FP-uk9"/>
+                <constraint firstItem="35D-pY-0rs" firstAttribute="width" secondItem="gAM-ED-jub" secondAttribute="width" id="eDA-Ab-rOD"/>
+                <constraint firstItem="vhw-9q-7V4" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" priority="750" constant="30" id="v2Q-r8-t2S"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gAM-ED-jub" secondAttribute="bottom" constant="15" id="v4j-PD-7C8"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-111.2" y="23.838080959520241"/>
+        </view>
+    </objects>
+</document>

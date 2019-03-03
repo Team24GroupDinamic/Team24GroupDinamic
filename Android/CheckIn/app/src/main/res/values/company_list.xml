@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="company_list">
+        <item>British Airlines</item>
+        <item>Aeroflot</item>
+        <item>Ural Airlines</item>
+    </string-array>
+</resources>
