@@ -1,5 +1,6 @@
 package com.example.hackerman.check_in;
 
+import android.app.FragmentTransaction;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -80,9 +81,11 @@ class DBAccesser {
     public class GetSurnameStartRequest extends AsyncTask<String, Void, String[]> {
 
         Context context;
+        FragmentTransaction ftrans;
 
-        GetSurnameStartRequest(Context context) {
+        GetSurnameStartRequest(Context context, FragmentTransaction ftrans) {
             this.context = context;
+            this.ftrans = ftrans;
         }
 
         @Override
@@ -99,7 +102,7 @@ class DBAccesser {
         @Override
         protected void onPostExecute(String[] s) {
             super.onPostExecute(s);
-            new Requester().new RequestSurnameAndNumber(context).execute(s);
+            new Requester().new RequestSurnameAndNumber(context, ftrans).execute(s);
         }
     }
 }

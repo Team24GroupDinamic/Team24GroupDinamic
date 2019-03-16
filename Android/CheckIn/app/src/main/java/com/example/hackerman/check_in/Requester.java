@@ -1,5 +1,7 @@
 package com.example.hackerman.check_in;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.ArrayAdapter;
@@ -24,9 +26,11 @@ class Requester {
     class RequestSurnameAndNumber extends AsyncTask<String, Void, String> {
 
         private Context context;
+        private FragmentTransaction ftrans;
 
-        RequestSurnameAndNumber(Context context) {
+        RequestSurnameAndNumber(Context context, FragmentTransaction ftrans) {
             this.context = context;
+            this.ftrans = ftrans;
         }
 
         @Override
@@ -35,6 +39,7 @@ class Requester {
             Gson gson = new GsonBuilder().create();
             String json = gson.toJson(new JsonClasses().new SurnameNumber(strings[0], strings[1], strings[2]));
             String url = strings[3];
+            StringBuilder response = new StringBuilder("no response");
 
             try {
 
@@ -49,10 +54,11 @@ class Requester {
                 wr.flush();
                 wr.close();
 
+                response = new StringBuilder();
+
                 BufferedReader in = new BufferedReader(
                         new InputStreamReader(con.getInputStream()));
                 String inputLine;
-                StringBuilder response = new StringBuilder();
 
                 while ((inputLine = in.readLine()) != null) {
                     response.append(inputLine);
@@ -71,8 +77,15 @@ class Requester {
             super.onPostExecute(s);
             Gson gson = new GsonBuilder().create();
             JsonClasses.Error error = gson.fromJson(s, JsonClasses.Error.class);
-            if (error != null)
+            if (s.equals("no response"))
+                Toast.makeText(context, "Error occurred. Unknown error!", Toast.LENGTH_LONG).show();
+            else if (error != null)
                 Toast.makeText(context, "Error occurred. " + error.getError(), Toast.LENGTH_LONG).show();
+            else if (s.isEmpty()) {
+                ftrans.add(R.id.fragment_container, new SuccessfulRegistrationFragment());
+                ftrans.addToBackStack(null);
+                ftrans.commit();
+            }
         }
     }
 

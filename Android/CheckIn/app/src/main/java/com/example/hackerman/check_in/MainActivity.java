@@ -39,17 +39,15 @@ public class MainActivity extends AppCompatActivity {
             ftrans = getFragmentManager().beginTransaction();
             switch (item.getItemId()) {
                 case R.id.nav_register:
-                    Fragment registrationFragment = new RegistrationFragment();
-                    ftrans.replace(R.id.fragment_container, registrationFragment);
+                    ftrans.replace(R.id.fragment_container, new RegistrationFragment());
                     ftrans.commit();
                     return true;
                 case R.id.nav_profile:
-                    Fragment personalDataFragment = new ProfileFragment();
-                    ftrans.replace(R.id.fragment_container, personalDataFragment);
+                    ftrans.replace(R.id.fragment_container, new ProfileFragment());
                     ftrans.commit();
                     return true;
-                case R.id.navigation_register_history:
-                    return true;
+//                case R.id.navigation_register_history:
+//                    return true;
             }
             return false;
         }

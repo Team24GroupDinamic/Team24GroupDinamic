@@ -1,6 +1,7 @@
 package com.example.hackerman.check_in;
 
 import android.animation.ValueAnimator;
+import android.app.FragmentTransaction;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Rect;
 import android.os.Bundle;
@@ -80,7 +81,7 @@ public class RegistrationFragment extends Fragment {
                 if (reservationNumber.getText().toString().isEmpty())
                     Toast.makeText(getActivity().getApplicationContext(), R.string.enter_correct_number, Toast.LENGTH_LONG).show();
                 else {
-                    new DBAccesser(db).new GetSurnameStartRequest(getActivity().getApplicationContext())
+                    new DBAccesser(db).new GetSurnameStartRequest(getActivity().getApplicationContext(), getFragmentManager().beginTransaction())
                             .execute(reservationNumber.getText().toString(), ((JsonClasses.Aircompany)companyList.getSelectedItem()).getId(), URL_POST_SUR_NUM);
                 }
             }

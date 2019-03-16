@@ -10,10 +10,11 @@
     <string name="enter_surname">Введите фамилию...</string>
     <string name="submit">Сохранить изменения</string>
     <string name="intro_1_text">Зарегистрируйтесь на рейс одним кликом, используя Check-In App</string>
-    <string name="intro_3_text">Пожалуйста, введите вашу фамилию. Это разовая процедура, но вы сможете изменить поле с фамилей в люобое время</string>
+    <string name="intro_3_text">Пожалуйста, введите вашу фамилию. Это разовая процедура, но вы сможете изменить поле с фамилей в любое время</string>
     <string name="enter_correct_curname">Пожалуйста введите верную фамилию, используя латиницу</string>
     <string name="enter_correct_number">Пожалуйста, введите верный номер брони</string>
     <string name="surname">Фамилия</string>
     <string name="profile_n_settings">Профиль и настройки</string>
     <string name="registration">Регистрация</string>
+    <string name="registration_successful">Регистрация завершена успешно!</string>
 </resources>

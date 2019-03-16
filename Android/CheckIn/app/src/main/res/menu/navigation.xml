@@ -11,9 +11,9 @@
         android:icon="@mipmap/ic_profile"
         android:title="@string/title_profile"/>
 
-    <item
-        android:id="@+id/navigation_register_history"
-        android:icon="@mipmap/ic_reg_history"
-        android:title="@string/title_history"/>
+    <!--<item-->
+        <!--android:id="@+id/navigation_register_history"-->
+        <!--android:icon="@mipmap/ic_reg_history"-->
+        <!--android:title="@string/title_history"/>-->
 
 </menu>
